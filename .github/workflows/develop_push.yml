@@ -35,7 +35,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [13.x]
+        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -52,7 +52,7 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.DEV_FIREBASE_TOKEN }}
           PROJECT_ID: ${{ secrets.DEV_PROJECT_ID }}
         if: ${{ env.PROJECT_ID != '' && env.FIREBASE_TOKEN != ''}}
-        uses: w9jds/firebase-action@v1.1.0
+        uses: w9jds/firebase-action@master
         with:
           args: deploy --project ${{ secrets.DEV_PROJECT_ID }} -f
   slack_notification:
