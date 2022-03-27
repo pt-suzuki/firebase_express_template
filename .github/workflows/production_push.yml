@@ -5,10 +5,6 @@ on:
     branches:
       - master
 
-env:
-  IMAGE_NAME: express-template
-  BUILD_TAG: latest
-
 jobs:
   test:
     runs-on: ubuntu-latest
