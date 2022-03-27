@@ -1,4 +1,4 @@
-name: firebase express deploy
+name: firebase deploy for Develop
 
 on:
   push:
