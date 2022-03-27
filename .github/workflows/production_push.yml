@@ -21,13 +21,16 @@ jobs:
           node-version: "17.x"
 
       - name: Nodemodules install
+        working-directory: ./functions
         run: npm install
 
       - name: Eslint
-        run: cd functions && npm run lint
+        working-directory: ./functions
+        run: npm run lint
 
       - name: Jest
-        run: cd functions && npm run test
+        working-directory: ./functions
+        run: npm run test
 
   build_flow:
     runs-on: ubuntu-latest
