@@ -1,4 +1,4 @@
-name: ci/docker Build and Push for Production
+name: firebase deploy for Production
 
 on:
   push:
@@ -24,10 +24,10 @@ jobs:
         run: npm install
 
       - name: Eslint
-        run: npm run lint
+        run: cd functions && npm run lint
 
       - name: Jest
-        run: npm run test
+        run: cd functions && npm run test
 
   build_flow:
     runs-on: ubuntu-latest
