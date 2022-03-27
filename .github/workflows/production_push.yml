@@ -43,7 +43,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Prepare gcloud CLI
-        uses: google-github-actions/setup-gcloud@v0'
+        uses: google-github-actions/setup-gcloud@v0
         env:
           PROD_GCP_SA_KEY: ${{ secrets.PROD_GCP_SA_KEY }}
         if: ${{ env.PROD_GCP_SA_KEY != ''}}
